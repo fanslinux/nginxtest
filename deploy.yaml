@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+  labels:
+    component: testnginx
+  name: testnginx
+  namespace: jenkins
+spec:
+  containers:
+  - name: testnginx
+    image: ##IMAGE##
+    imagePullPolicy: IfNotPresent
+    ports:
+      - name: http
+        containerPort: 80
+        protocol: TCP
